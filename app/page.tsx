@@ -2,9 +2,10 @@
 
 import type React from "react";
 
-import { useState, useCallback } from "react";
-import { Upload, Download, Save, FileText, Binary, Zap } from "lucide-react";
+import { Binary, Download, FileText, Save, Upload, Zap } from "lucide-react";
+import { useCallback, useState } from "react";
 
+import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -15,10 +16,9 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Separator } from "@/components/ui/separator";
 
 type ParsedData = {
   geo: number;
