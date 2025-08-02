@@ -156,7 +156,7 @@ const HollowKnightEditor = () => {
         .join(" ");
       setHexData(hexString);
 
-      setFileData(newData.buffer);
+      setFileData(newData.buffer as unknown as ArrayBuffer);
       setError("");
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err) {
