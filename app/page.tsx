@@ -201,8 +201,31 @@ const HollowKnightEditor = () => {
             Upload Save File
           </CardTitle>
           <CardDescription>
-            Select your Hollow Knight save file (usually located in
-            %USERPROFILE%\AppData\LocalLow\Team Cherry\Hollow Knight\)
+            Select your Hollow Knight save File
+            <br />
+            <ul className="list-disc list-inside mt-2">
+              <li className="mb-1">
+                On MacOS, it usually located in $HOME/Library/Application
+                Support/unity.Team Cherry.Hollow Knight/
+                <pre className="mt-2 bg-muted p-2 rounded text-xs">
+                  {`cd $HOME/Library/Application\ Support/unity.Team\ Cherry.Hollow\ Knight`}
+                </pre>
+              </li>
+              <li className="mb-1">
+                On Linux, it usually located in $HOME/.config/unity3d/Team
+                Cherry/Hollow Knight
+                <pre className="mt-2 bg-muted p-2 rounded text-xs">
+                  {`cd $HOME/.config/unity3d/Team\ Cherry/Hollow\ Knight`}
+                </pre>
+              </li>
+              <li className="mb-1">
+                On Windows, it usually located in %AppData%..\LocalLow\Team
+                Cherry\Hollow Knight
+                <pre className="mt-2 bg-muted p-2 rounded text-xs">
+                  {`%AppData%..\\LocalLow\\Team\\ Cherry\\Hollow Knight`}
+                </pre>
+              </li>
+            </ul>
           </CardDescription>
         </CardHeader>
         <CardContent>
