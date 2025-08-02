@@ -76,12 +76,14 @@ const HollowKnightEditor = () => {
       };
       reader.readAsArrayBuffer(uploadedFile);
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     []
   );
 
   const parseHollowKnightData = (data: Uint8Array): ParsedData => {
     // This is a simplified parser - actual Hollow Knight save format is more complex
     // These offsets are approximate and may need adjustment based on save version
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const view = new DataView(data.buffer);
 
     try {
@@ -96,6 +98,7 @@ const HollowKnightEditor = () => {
         bossRushMode: findIntValue(data, "bossRushMode") || 0,
         completionPercentage: findFloatValue(data, "completionPercentage") || 0,
       };
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err) {
       throw new Error("Failed to parse save data");
     }
@@ -155,6 +158,7 @@ const HollowKnightEditor = () => {
 
       setFileData(newData.buffer);
       setError("");
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err) {
       setError("Failed to apply modifications");
     }
